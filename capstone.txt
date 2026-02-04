@@ -1,2 +1,0 @@
-GitHub Repository URL:
-https://github.com/GabrielParsons/sticky_notes_django-
