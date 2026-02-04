@@ -1,0 +1,8 @@
+GitHub Repository URL:
+https://github.com/YOUR_USERNAME/sticky-notes-django
+
+INSTRUCTIONS:
+1. Create a public repository on GitHub named "sticky-notes-django"
+2. Add the remote: git remote add origin https://github.com/YOUR_USERNAME/sticky-notes-django.git
+3. Push the code: git push -u origin main
+4. Update this file with your actual GitHub username and repository URL
