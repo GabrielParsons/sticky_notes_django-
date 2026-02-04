@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sticky Notes List
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>All Sticky Notes</h2>
+    <a href="{% url 'sticky_note_create' %}" class="btn btn-primary mb-4">Create New Sticky Note</a>
+    
+    <div class="notes-container">
+        {% for note in notes %}
+        <div class="note">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.content }}</p>
+            <small>By: {{ note.author|default:"Anonymous" }}</small>
+            <div class="mt-2">
+                <a href="{% url 'sticky_note_detail' note.pk %}">View</a> | 
+                <a href="{% url 'sticky_note_edit' note.pk %}">Edit</a> | 
+                <a href="{% url 'sticky_note_delete' note.pk %}">Delete</a>
+            </div>
+        </div>
+        {% empty %}
+        <p>No sticky notes available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
